@@ -10,8 +10,9 @@ Once the token is generated on the client side, it is sent to the server, which 
 
 - **Firebase Integration**: Utilizes Firebase for server-side authentication.
 - **Firebase UI**: Generates initial access and refresh tokens using Firebase UI.(Feel free to use FirebaseJs for the same purpose)
-- **Secure Token Exchange**: Tokens are exchanged on the server for enhanced security.
+- **Secure Token Exchange**: Server exchanged the FirebaseIdToken and RefreshToken for an encrypted access token and same refresh token.
 - **IndexedDB Clearance**: Clears IndexedDB after token exchange for improved privacy.
+- **Server Side Token Refresh**: After initial token generation all the subsequent token refresh is handled by server not firebase ui.
 
 ## Getting Started
 
