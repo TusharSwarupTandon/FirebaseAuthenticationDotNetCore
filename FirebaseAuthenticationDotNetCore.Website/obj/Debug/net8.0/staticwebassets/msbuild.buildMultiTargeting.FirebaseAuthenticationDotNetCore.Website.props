@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\FirebaseAuthenticationDotNetCore.Website.props" />
-</Project>
