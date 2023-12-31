@@ -1,4 +1,4 @@
-# Firebase Authentication .Net Core
+# Firebase Authentication Asp.Net Core
 
 ## Overview
 
