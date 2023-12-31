@@ -1,0 +1,37 @@
+﻿@model FirebaseAuthenticationDotNetCore.Website.Models.UserDetails
+@{
+    ViewBag.Title = "Basic User Info";
+    Layout = "_LayoutStandard";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<hr/>
+
+<div class="shadow-sm p-3 mb-5 bg-white rounded">
+    <div class="row mb-3">
+        @Html.LabelFor(m => m.Name, new { @class = "col-sm-2 col-form-label"})
+        <div class="col-sm-10">
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+    </div>
+    <div class="row mb-3">
+        @Html.LabelFor(m => m.EmailAddress, new { @class = "col-sm-2 col-form-label"})
+        <div class="col-sm-10">
+            @Html.TextBoxFor(m => m.EmailAddress, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+    </div>
+    <div class="row mb-3">
+        @Html.LabelFor(m => m.PhoneNumber, new { @class = "col-sm-2 col-form-label"})
+        <div class="col-sm-10">
+            @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginForm("Logout", "Account"))
+{
+    <div class="col-md-12 text-center">
+        <input type="submit" value="LogOut" class="btn btn-danger"/>
+    </div>
+}

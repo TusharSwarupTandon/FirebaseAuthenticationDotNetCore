@@ -1,0 +1,11 @@
+C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Models\bin\Debug\net8.0\FirebaseAuthenticationDotNetCore.Models.deps.json
+C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Models\bin\Debug\net8.0\FirebaseAuthenticationDotNetCore.Models.dll
+C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Models\bin\Debug\net8.0\FirebaseAuthenticationDotNetCore.Models.pdb
+C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Models\obj\Debug\net8.0\FirebaseAuthenticationDotNetCore.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Models\obj\Debug\net8.0\FirebaseAuthenticationDotNetCore.Models.AssemblyInfoInputs.cache
+C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Models\obj\Debug\net8.0\FirebaseAuthenticationDotNetCore.Models.AssemblyInfo.cs
+C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Models\obj\Debug\net8.0\FirebaseAuthenticationDotNetCore.Models.csproj.CoreCompileInputs.cache
+C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Models\obj\Debug\net8.0\FirebaseAuthenticationDotNetCore.Models.dll
+C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Models\obj\Debug\net8.0\refint\FirebaseAuthenticationDotNetCore.Models.dll
+C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Models\obj\Debug\net8.0\FirebaseAuthenticationDotNetCore.Models.pdb
+C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Models\obj\Debug\net8.0\ref\FirebaseAuthenticationDotNetCore.Models.dll

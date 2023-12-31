@@ -1,0 +1,17 @@
+﻿@using FirebaseAuthenticationDotNetCore.Website.Infrastructure.Extensions
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@this.RedefineSection("Styles")
+
+<div class="container">
+    @RenderBody()
+</div>
+
+@this.RedefineSection("Footer")
+
+@section Scripts {
+    @await RenderSectionAsync("Scripts", false)
+}

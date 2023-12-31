@@ -1,0 +1,137 @@
+﻿@using Microsoft.Extensions.Options
+@using FirebaseAuthenticationDotNetCore.Common.Configuration.Security
+@model FirebaseAuthenticationDotNetCore.Website.Models.LoginViewModel
+@inject IOptions<FirebaseAuthConfiguration> FirebaseAuthConfiguration
+
+@{
+    ViewBag.Title = "Log In";
+    Layout = "_LayoutStandard";
+}
+
+<h2>@ViewBag.Title</h2>
+<p class="lead">Experience seamless login with Firebase! Enter your credentials to explore the world of server-side authentication in our test application.</p>
+<div id="login-content" style="display: none">
+    <div id="firebaseUiAuthContainer"></div>
+</div>
+<div id="loading-spinner">
+    <div class="spinner-border text-dark text-center" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+
+
+@section Scripts
+{
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script type="text/javascript">
+        const firebaseConfig = {
+            apiKey: @Json.Serialize(FirebaseAuthConfiguration.Value.ApiKey),
+            authDomain: @Json.Serialize(FirebaseAuthConfiguration.Value.AuthDomain),
+            projectId: @Json.Serialize(FirebaseAuthConfiguration.Value.ProjectId),
+            storageBucket: @Json.Serialize(FirebaseAuthConfiguration.Value.StorageBucket),
+            messagingSenderId: @Json.Serialize(FirebaseAuthConfiguration.Value.MessagingSenderId),
+            appId: @Json.Serialize(FirebaseAuthConfiguration.Value.AppId),
+        }
+        
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/ui/6.1.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.1.0/firebase-ui-auth.css"/>
+
+    <script type="text/javascript">
+        const uiConfig = {
+            callbacks: {
+                signInSuccessWithAuthResult : function (authResult, redirectUrl) 
+                {
+                    return false;
+                },
+            },
+            signInOptions: [
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+            ],
+        };
+        
+        const ui = new firebaseui.auth.AuthUI(firebase.auth());
+        ui.start('#firebaseUiAuthContainer', uiConfig);
+        
+        async function handleSignInSuccess(user) {
+            const uid = user.uid;
+            const refreshToken = user._delegate.stsTokenManager.refreshToken;
+            await sendRefreshTokenToServer(uid, refreshToken);
+            clearIndexedDBData();
+        }
+        
+        async function sendRefreshTokenToServer(uid, refreshToken)
+        {
+            let loginViewModel = {};
+            loginViewModel["UserIdentifier"] = uid;
+            loginViewModel["SecurityToken"] = refreshToken;
+
+            await $.ajax(
+                {
+                    url: '@Url.Action("Login", "Account")',
+                    type: '@HttpMethod.Post',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(loginViewModel),
+                    success: function (response) {
+                        if (response.isSuccess === true)
+                        {
+                            window.location.reload();
+                        }    
+                    },
+                    error: (error) => {
+                        console.log("Server unresponsive");
+                    }
+                }
+            )
+        }
+        
+        function clearIndexedDBData() {
+            const request = window.indexedDB.deleteDatabase('firebaseLocalStorageDb');
+            
+            request.onsuccess = function () {
+                resolve();
+            };
+            
+            request.onerror = function (event) {
+                reject('Error clearing IndexedDB data: ' + event.target.errorCode);
+            };
+        }
+    </script>
+
+    <script type="module">
+        $( document ).ready(async () => 
+        {    
+            const loadingSpinner = document.getElementById("loading-spinner");
+            const loginContent = document.getElementById("login-content");
+                        
+            const showSpinner = function () 
+            {
+                loadingSpinner.style.display = 'block';
+                loginContent.style.display = 'none';
+            }
+            
+            const showLoginContent = function () 
+            {
+                loadingSpinner.style.display = 'none';
+                loginContent.style.display = 'block';
+            }  
+
+            showSpinner();
+
+            firebase.auth().onAuthStateChanged(async (user) => {
+                if (user) {
+                    showSpinner();
+                    await handleSignInSuccess(user);
+                }
+                else {
+                    showLoginContent();
+                }
+            });
+        });
+    </script>
+}
