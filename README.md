@@ -10,7 +10,7 @@ Once the token is generated on the client side, it is sent to the server, which 
 
 - **Firebase Integration**: Utilizes Firebase for server-side authentication.
 - **Firebase UI**: Generates initial access and refresh tokens using Firebase UI.(Feel free to use FirebaseJs for the same purpose)
-- **Secure Token Exchange**: Server exchanged the FirebaseIdToken and RefreshToken for an encrypted access token and same refresh token.
+- **Secure Token Exchange**: Server exchanges the FirebaseIdToken and RefreshToken for an encrypted access token and same refresh token.
 - **IndexedDB Clearance**: Clears IndexedDB after token exchange for improved privacy.
 - **Server Side Token Refresh**: After initial token generation all the subsequent token refresh is handled by server not firebase ui.
 
@@ -23,14 +23,13 @@ Once the token is generated on the client side, it is sent to the server, which 
 ### Installation
 
 1. Clone the repository: `git clone https://github.com/TusharSwarupTandon/FirebaseAuthenticationDotNetCore.git`
-2. Navigate to the project folder: `FirebaseAuthenticationDotNetCore.Website`
+2. Navigate to the project folder: `cd FirebaseAuthenticationDotNetCore.Website`
 3. Restore dependencies: `dotnet restore`
 4. Configure Firebase:
    - Set credentials in `appsettings.json`.
 
 ### Usage
 
-1. Head over to FirebaseAuthenticationDotNetCore.Website
 1. Run the application: `dotnet run`
 2. Access the app in your browser: `http://localhost:7070`
 
