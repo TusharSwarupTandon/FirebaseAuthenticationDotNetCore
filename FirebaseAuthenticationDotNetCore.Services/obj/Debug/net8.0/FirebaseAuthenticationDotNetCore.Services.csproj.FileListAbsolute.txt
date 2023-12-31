@@ -23,3 +23,4 @@ C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\Fireb
 C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Services\bin\Debug\net8.0\FirebaseAuthenticationDotNetCore.Common.pdb
 C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Services\bin\Debug\net8.0\FirebaseAuthenticationDotNetCore.Models.pdb
 C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Services\obj\Debug\net8.0\FirebaseAuthenticationDotNetCore.Services.csproj.CopyComplete
+C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Services\obj\Debug\net8.0\FirebaseAuthenticationDotNetCore.Services.sourcelink.json

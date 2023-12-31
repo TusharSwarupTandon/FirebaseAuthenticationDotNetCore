@@ -9,3 +9,4 @@ C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\Fireb
 C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Models\obj\Debug\net8.0\refint\FirebaseAuthenticationDotNetCore.Models.dll
 C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Models\obj\Debug\net8.0\FirebaseAuthenticationDotNetCore.Models.pdb
 C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Models\obj\Debug\net8.0\ref\FirebaseAuthenticationDotNetCore.Models.dll
+C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Models\obj\Debug\net8.0\FirebaseAuthenticationDotNetCore.Models.sourcelink.json

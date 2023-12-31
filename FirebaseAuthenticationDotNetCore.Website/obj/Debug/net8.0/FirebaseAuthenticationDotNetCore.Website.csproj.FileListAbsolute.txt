@@ -56,3 +56,4 @@ C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\Fireb
 C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Website\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Website\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Website\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Website\obj\Debug\net8.0\FirebaseAuthenticationDotNetCore.Website.sourcelink.json

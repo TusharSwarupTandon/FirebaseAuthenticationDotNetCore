@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FirebaseAuthenticationDotNetCore.Common")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2868b30342232a7edf18e4d24fecf4359c4f1934")]
 [assembly: System.Reflection.AssemblyProductAttribute("FirebaseAuthenticationDotNetCore.Common")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FirebaseAuthenticationDotNetCore.Common")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

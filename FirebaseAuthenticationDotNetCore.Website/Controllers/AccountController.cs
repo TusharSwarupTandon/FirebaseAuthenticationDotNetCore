@@ -45,7 +45,7 @@ public class AccountController(ISecurityService securityService) : Controller
         return Json(response);
     }
 
-    [HttpGet, HttpPost]
+    [HttpGet]
     public async Task<ActionResult> RefreshAsync(string returnUrl)
     {
         if (HttpContext.User.Identity?.IsAuthenticated == true)
@@ -69,12 +69,12 @@ public class AccountController(ISecurityService securityService) : Controller
     }
 
     [HttpPost]
-    public async Task<ActionResult> LogoutAsync()
+    public ActionResult Logout()
     {
         Response.Cookies.Delete(CookieConfiguration.AuthCookieName);
         Response.Cookies.Delete(CookieConfiguration.RefreshCookieName, new CookieOptions
         {
-            Path = "/Account/Refresh"
+            Path = CookieConfiguration.RefreshCookiePath
         });
 
         return RedirectToAction("Login");
@@ -96,7 +96,7 @@ public class AccountController(ISecurityService securityService) : Controller
         
         Response.Cookies.Append(CookieConfiguration.AuthCookieName, accessToken, new CookieOptions
         {
-            Path = "/",
+            Path = CookieConfiguration.AuthCookiePath,
             Secure = true,
             SameSite = SameSiteMode.Strict,
             HttpOnly = true,
@@ -108,7 +108,7 @@ public class AccountController(ISecurityService securityService) : Controller
         Response.Cookies.Delete(CookieConfiguration.RefreshCookieName);
         Response.Cookies.Append(CookieConfiguration.RefreshCookieName, refreshToken, new CookieOptions
         {
-            Path = "/Account/Refresh",
+            Path = CookieConfiguration.RefreshCookiePath,
             Expires = DateTimeOffset.UtcNow.AddDays(90),
             Secure = true,
             SameSite = SameSiteMode.Strict,

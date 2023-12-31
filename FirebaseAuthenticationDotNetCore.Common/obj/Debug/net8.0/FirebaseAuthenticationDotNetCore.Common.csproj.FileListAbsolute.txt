@@ -10,3 +10,4 @@ C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\Fireb
 C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Common\obj\Debug\net8.0\FirebaseAuthenticationDotNetCore.Common.pdb
 C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Common\obj\Debug\net8.0\ref\FirebaseAuthenticationDotNetCore.Common.dll
 C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Common\obj\Debug\net8.0\FirebaseAuthenticationDotNetCore.Common.csproj.AssemblyReference.cache
+C:\Users\tushar.tandon\Desktop\Personal\Firebase-DotnetCore-Authentication\FirebaseAuthenticationDotNetCore.Common\obj\Debug\net8.0\FirebaseAuthenticationDotNetCore.Common.sourcelink.json
