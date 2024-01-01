@@ -61,7 +61,6 @@ Ensure to configure your project credentials in the `appsettings.json` file.
         "ProjectId": "",
         "PrivateKeyId": "",
         "PrivateKey": "",
-        "client_email": "",
         "ClientEmail": "",
         "ClientId": "",
         "AuthUri": "",
@@ -71,3 +70,7 @@ Ensure to configure your project credentials in the `appsettings.json` file.
         "UniverseDomain": ""
     }
 }
+```
+- `CookieConfig:AuthEncryptionKey`: This key is used to encrypt and decrypt JWT when sent from the server.
+- `FirebaseAuthConfig`: You can download this from your project's Firebase console by navigating to Project Settings -> General -> Your Apps -> Config.
+- `FirebaseServiceAccountConfig`: You need to download this from your Firebase project by going to Project Settings -> Service Accounts -> Generate New Private Key
